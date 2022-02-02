@@ -28,13 +28,17 @@ namespace Sim
         /*====================================================================
         step: perform one integration step vua Euler's Method
         ====================================================================*/
-        public void step(double dt)
+        public void step(double dt) //str method
         {
             rhsFunc(x,f);
             int i;
             for(i=0;i<n;++i)
             {
+                //if(method ="euler")
+                //{
                 x[i] = x[i] + f[i]*dt;
+                //}
+
             }
             // Console.WriteLine($"{f[0].ToString()}   {f[1].ToString()}");
         }
